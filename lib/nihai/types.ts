@@ -90,3 +90,69 @@ export interface MedicalEntry {
   relatedHerbs?: string[];
   relatedAcupoints?: string[];
 }
+
+/** 针灸经验穴位 */
+export interface AcuExperience {
+  id: number;
+  /** 适应症/疾病 */
+  condition: string;
+  /** 穴位组合 */
+  acupoints: string;
+  /** 分类 */
+  category: string;
+  /** 补充说明 */
+  note?: string;
+}
+
+/** 透针透穴法 */
+export interface TransNeedling {
+  id: number;
+  /** 透穴组合：A透B */
+  combo: string;
+  /** 治疗症状 */
+  indication: string;
+  /** 配穴 */
+  supporting?: string;
+  /** 来源 */
+  source: string;
+}
+
+/** 汉唐方剂 */
+export interface HantangFormula {
+  id: number;
+  /** 方名（如「白带丸」、「大禹丸」） */
+  name: string;
+  /** 主治疾病 */
+  indication: string;
+  /** 核心理论（一句话） */
+  theory?: string;
+  /** 主要成分（公开部分） */
+  ingredients?: string;
+}
+
+/** 经典经方 */
+export interface ClassicFormula {
+  id: string;
+  /** 方名 */
+  name: string;
+  /** 出处 */
+  source: string;
+  /** 组成药物 */
+  composition: string;
+  /** 主治 */
+  indication: string;
+  /** 倪师用法要点 */
+  niUsage?: string;
+}
+
+/** 天纪课程集数结构 */
+export interface TianjiEpisode {
+  /** DVD编号 1-24 */
+  dvd: number;
+  /** 前半段主题 */
+  firstHalf: string;
+  /** 后半段主题 */
+  secondHalf: string;
+  /** 关键内容 */
+  highlights: string[];
+}

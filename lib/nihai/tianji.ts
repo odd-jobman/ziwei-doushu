@@ -12,7 +12,7 @@
  *   推命     → 河洛数理派
  */
 
-import type { NiModule, Hexagram, FengShuiEntry } from './types';
+import type { NiModule, Hexagram, FengShuiEntry, TianjiEpisode } from './types';
 
 // ─── 天纪模块 ────────────────────────────────────────────
 export const TIANJI_MODULES: NiModule[] = [
@@ -469,6 +469,67 @@ export const FENGSHUI_ENTRIES: FengShuiEntry[] = [
   },
 ];
 
+// ─── 天纪24集课程结构（每集2小时：前半段命学/后半段易经） ──
+export const TIANJI_EPISODES: TianjiEpisode[] = [
+  { dvd: 1, firstHalf: '天纪开篇·天纪与真理', secondHalf: '易经三义·先后天八卦', highlights: ['如何分辨君子与小人', '天地人三才论', '紫微斗数为何优于子平法', '文字只是船真理才是彼岸'] },
+  { dvd: 2, firstHalf: '紫微斗数·十二宫位详解', secondHalf: '八卦地理配置·爻变与时机', highlights: ['命宫为本三方为用', '夫妻宫兼看福德宫', '面相五形论', '名位相等原则', '卜筮有时机不疑何卜'] },
+  { dvd: 3, firstHalf: '紫微斗数·星辰介绍(上)', secondHalf: '乾坤屯蒙需讼', highlights: ['紫微星帝座特质', '天府财库星', '太阳星庙旺利陷', '天机善星智慧'] },
+  { dvd: 4, firstHalf: '紫微斗数·星辰介绍(下)', secondHalf: '师比小畜履泰否', highlights: ['杀破狼三星一定同在三方', '武曲财星', '贪狼桃花星', '廉贞囚星', '巨门暗星'] },
+  { dvd: 5, firstHalf: '紫微斗数·十二张案例讲义', secondHalf: '同人大有谦豫随蛊', highlights: ['十二张案例紫微在十二宫各一张', '命宫贪狼文武双全', '身宫在财帛宫为职业妇女', '阳宅化解论'] },
+  { dvd: 6, firstHalf: '紫微斗数·四化星详解', secondHalf: '临观噬嗑贲剥复', highlights: ['化禄主财性守', '化权性刚代表官印', '化科主科名名气', '化忌主劫杀', '大限流年四化叠加'] },
+  { dvd: 7, firstHalf: '紫微斗数·格局论(上)', secondHalf: '无妄大畜颐大过坎离', highlights: ['杀破狼格局变动开创', '火贪格主暴发', '三方四正看格局', '官禄宫最喜权星'] },
+  { dvd: 8, firstHalf: '紫微斗数·格局论(下)', secondHalf: '咸恒遁大壮晋明夷', highlights: ['流年批命法', '迷津评断一生总格局', '命相同参提高准确率', '南人北相为贵相'] },
+  { dvd: 9, firstHalf: '紫微斗数·大限流年', secondHalf: '家人睽蹇解损益', highlights: ['大限十年运势', '小限流年推算', '人定胜天论', '三年前化解论'] },
+  { dvd: 10, firstHalf: '紫微斗数·实战案例(上)', secondHalf: '夬姤萃升困井', highlights: ['官禄化忌事业受阻', '财帛化禄财运亨通', '夫妻宫煞星婚姻不顺'] },
+  { dvd: 11, firstHalf: '紫微斗数·实战案例(下)', secondHalf: '革鼎震艮渐归妹', highlights: ['疾厄宫判断健康', '结合中医子午流注', '煞星在午主心脏在丑主肝'] },
+  { dvd: 12, firstHalf: '面相学·五形论详解', secondHalf: '丰旅巽兑涣节', highlights: ['木火土金水五种面相类型', '越纯越贵原则', '气色主两个礼拜', '眼神判断法'] },
+  { dvd: 13, firstHalf: '面相学·气色与断命', secondHalf: '中孚小过既济未济', highlights: ['面相气色判断吉凶', '印堂日角月角', '眉毛代表六亲', '眼袋判断子女'] },
+  { dvd: 14, firstHalf: '推命学·子平法入门', secondHalf: '64卦综合应用(上)', highlights: ['子平法四柱八字排列', '天干地支五行属性', '十神体系'] },
+  { dvd: 15, firstHalf: '推命学·大运流年', secondHalf: '64卦综合应用(下)', highlights: ['大运排列', '流年推演', '卦象在实际生活中的应用'] },
+  { dvd: 16, firstHalf: '测字术·拆字会意法', secondHalf: '占卜实战·起卦法', highlights: ['拆字法分解偏旁', '会意法联想推断', '揲蓍法', '金钱卦'] },
+  { dvd: 17, firstHalf: '测字术·实战案例', secondHalf: '六爻断事技巧', highlights: ['测字时机和环境', '六神占断', '用神取用'] },
+  { dvd: 18, firstHalf: '堪舆学·峦头论(上)', secondHalf: '龙穴砂水基础', highlights: ['山形水势判断', '龙脉走势与气脉', '穴位藏风聚气'] },
+  { dvd: 19, firstHalf: '堪舆学·峦头论(下)', secondHalf: '罗盘使用与理气', highlights: ['砂手环抱', '水口进出', '罗盘方位测量', '九星飞布原理'] },
+  { dvd: 20, firstHalf: '堪舆学·阳宅风水', secondHalf: '三吉六秀·天星四贵', highlights: ['房屋坐向选择', '室内方位安排', '三吉方向', '六秀方向好砂则吉'] },
+  { dvd: 21, firstHalf: '堪舆学·阴宅风水', secondHalf: '八煞黄泉·城局九星', highlights: ['八煞黄泉绝对禁忌', '天星四贵', '城局形势判断', '来龙朝山砂势'] },
+  { dvd: 22, firstHalf: '堪舆学·2/3大于1/3', secondHalf: '风水改运实例', highlights: ['人事+地理=2/3>天命1/3', '好风水有鱼虾龟', '床位朝向决定生子性别'] },
+  { dvd: 23, firstHalf: '综合应用·命相卜术结合', secondHalf: '天纪在生活中的实践', highlights: ['紫微+面相+易经综合判断', '天地人三纪统一观', '倪师批命实战示范'] },
+  { dvd: 24, firstHalf: '天纪总结·核心心法', secondHalf: '传承与期许', highlights: ['天纪精神总结', '命运掌握在自己手上', '文化传承使命', '不希望中华文化失传'] },
+];
+
+// ─── 倪师天纪核心语录库 ──────────────────────────────────
+export const TIANJI_QUOTES = [
+  { text: '文字只是协助诸位到达真理的彼岸，千万不要三个月以后，怎么还是扛着船在马路上跑', topic: '学习态度' },
+  { text: '大道至简——飞星飞来飞去太复杂，不搞这个', topic: '紫微斗数' },
+  { text: '命宫为本，三方为用——命宫主星决定基本格局与天生性格，三方决定用武之地', topic: '紫微斗数' },
+  { text: '身宫在财帛宫的女孩子，一般来说就是职业妇女', topic: '紫微斗数' },
+  { text: '最怕的是七杀临身，七杀临身的人一辈子多败少成', topic: '紫微斗数' },
+  { text: '官禄宫最喜欢权星入进来', topic: '紫微斗数' },
+  { text: '算命就是一个讨论果的哲学', topic: '命学哲理' },
+  { text: '命是天注定的，运掌握在我们自己手上', topic: '命学哲理' },
+  { text: '三年前有办法化解，到了时候再改都是事后。碗打破了我们再去解', topic: '命学哲理' },
+  { text: '祸福无门，咎由自取', topic: '命学哲理' },
+  { text: '看到外面，就知道里面藏了什么', topic: '面相' },
+  { text: '看相最难看的就是气色。气色主两个礼拜', topic: '面相' },
+  { text: '越纯越贵——五形越纯正的面相类型越贵', topic: '面相' },
+  { text: '南人北相、北人南相是贵相的重要标志', topic: '面相' },
+  { text: '害的到你的叫做小人。会影响到你的叫做小人', topic: '识人' },
+  { text: '眼珠闪动主心术不正，四白眼主横死，三角眼主心生毒计', topic: '面相' },
+  { text: '人事的努力加上地理上的调整，一定能大于先天的命运', topic: '堪舆' },
+  { text: '好的风水地方要有鱼虾龟——生气充沛的标志', topic: '堪舆' },
+  { text: '八煞黄泉是坟墓和阳宅立向的绝对禁忌', topic: '堪舆' },
+  { text: '唯有紫微斗数可以把天文和地理两个融合在一起', topic: '紫微斗数' },
+  { text: '如果读了易经，越弄越复杂，就是没有读通易经', topic: '易经' },
+  { text: '不疑何卜——只有有疑虑时才占卜', topic: '易经' },
+  { text: '外象一直在变，但精神是一样的', topic: '易经' },
+  { text: '爸爸住爸爸位置，儿子住儿子位置，叫做名位相等', topic: '堪舆' },
+  { text: '中国五百年出一个天官，现在还不到五百年', topic: '天文' },
+  { text: '煞星通过疾厄宫在午主心脏，在丑主肝', topic: '紫微斗数' },
+  { text: '我不希望这些中华文化失传，所以就教了许多学生', topic: '传承' },
+  { text: '命相同参会提高准确率', topic: '综合' },
+  { text: '天纪就是自然法则，是真理', topic: '天纪总论' },
+];
+
 // ─── 统计 ────────────────────────────────────────────────
 export const TIANJI_STATS = {
   totalModules: TIANJI_MODULES.length,
@@ -476,7 +537,12 @@ export const TIANJI_STATS = {
   totalChapters: TIANJI_MODULES.reduce((sum, m) => sum + m.chapters.length, 0),
   totalHexagrams: HEXAGRAMS.length,
   totalFengShui: FENGSHUI_ENTRIES.length,
+  totalEpisodes: TIANJI_EPISODES.length,
+  totalQuotes: 29,
   videoHours: 48,
   videoEpisodes: 24,
+  hdEpisodes: 83,
   recordYear: 1994,
+  lectureBooks: ['天机道', '人间道', '地脉道', '64卦易图'],
+  schools: ['三合派（紫微斗数）', '象数派（易经）', '九星派（堪舆）', '河洛数理派（推命）'],
 };
